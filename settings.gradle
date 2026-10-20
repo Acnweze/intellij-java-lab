@@ -1,2 +1,2 @@
-// The name shown for this project in Gradle and IntelliJ.
+// The name of this Gradle project, shown in IntelliJ IDEA.
 rootProject.name = 'intellij-java-lab'
