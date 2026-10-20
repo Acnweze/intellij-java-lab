@@ -3,19 +3,22 @@ plugins {
     id 'application'
 }
 
+// Project details
 group = 'com.acnweze'
 version = '1.0.0'
 
+// Use JDK 21 for this beginner-friendly experiment.
 java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(21)
     }
 }
 
-application {
-    mainClass = 'com.acnweze.lab.Main'
-}
-
 repositories {
     mavenCentral()
+}
+
+// Main.java is directly inside src/main/java.
+application {
+    mainClass = 'Main'
 }
