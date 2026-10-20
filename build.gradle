@@ -3,11 +3,11 @@ plugins {
     id 'application'
 }
 
-// Project details
+// Project coordinates
 group = 'com.acnweze'
 version = '1.0.0'
 
-// Use JDK 21 for this beginner-friendly experiment.
+// Use JDK 21, which is supported by current Gradle releases and IntelliJ IDEA.
 java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(21)
@@ -18,7 +18,7 @@ repositories {
     mavenCentral()
 }
 
-// Main.java is directly inside src/main/java.
+// Main.java is in src/main/java and does not declare a package.
 application {
     mainClass = 'Main'
 }
