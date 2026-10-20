@@ -1,34 +1,44 @@
 # IntelliJ Java Lab
 
-A small Java + Gradle project for experimenting with IntelliJ IDEA and GitHub.
+A small Java + Gradle project for practising file editing in IntelliJ IDEA and pushing changes to GitHub.
+
+## Project files
+
+- `settings.gradle` — sets the Gradle project name.
+- `build.gradle` — tells Gradle how to build and run the Java application.
+- `src/main/java/Main.java` — the Java program you can edit and run.
+- `README.md` — project instructions.
 
 ## Requirements
 
 - IntelliJ IDEA
-- JDK 21 (the project uses a Gradle Java toolchain)
-- Git, if you want to clone from the terminal
+- JDK 21
 
-## Open in IntelliJ IDEA
+## Run the program
 
-1. In IntelliJ, choose **Get from Version Control**.
-2. Paste this repository URL: https://github.com/Acnweze/intellij-java-lab
-3. Click **Clone** and open the downloaded project.
-4. When prompted, trust/open the project and allow Gradle to sync.
-5. Set the Gradle JVM to JDK 21 if IntelliJ asks. If JDK 21 is not installed, install it through IntelliJ's JDK download option.
-6. Open `src/main/java/com/acnweze/lab/Main.java` and click the green run icon beside `main`.
+1. Clone this repository in IntelliJ IDEA using **Get from VCS**.
+2. Open the project and allow Gradle to finish syncing.
+3. Set the Project SDK and Gradle JVM to JDK 21.
+4. Open `src/main/java/Main.java`.
+5. Click the green run triangle beside `main`, or use the Gradle task `application > run`.
 
-## Try these experiments
+The program displays the date and time, asks for your name, and prints a greeting.
 
-1. Change the welcome message and run the app again.
-2. Add two numbers and print their sum.
-3. Ask for a favourite programming language using `Scanner`.
-4. Create a new class called `Calculator`.
-5. Make a change, commit it, and push it to GitHub from IntelliJ.
+## Editing experiments
 
-## Gradle tasks
+Try changing one thing at a time:
 
-- `gradle tasks` — list available tasks
-- `gradle run` — run the application (when Gradle is installed/configured)
-- `gradle build` — compile and test the project
+1. In `settings.gradle`, change the project name to `my-first-java-project`.
+2. In `build.gradle`, change `version = '1.0.0'` to `version = '1.1.0'`. Keep `mainClass = 'Main'` unless you also move or rename the Java class.
+3. In `Main.java`, change the welcome message or add another `System.out.println("I made an edit!");` line.
+4. In this README, add a sentence under this section.
 
-This starter repository intentionally keeps the code small so you can focus on learning the IDE and build workflow.
+After each edit, save the file and run the program again if the change affects the Java code. The Gradle files may trigger a Gradle sync.
+
+## Useful Gradle tasks
+
+- `gradle tasks` — lists available tasks.
+- `gradle run` — runs the application when Gradle is available.
+- `gradle build` — compiles and builds the project.
+
+If you edit files in IntelliJ, use **Git > Commit** and **Push** to send your changes to GitHub.
