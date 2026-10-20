@@ -1,44 +1,61 @@
-# IntelliJ Java Lab
+# IntelliJ Java Lab: Console Calculator
 
-A small Java + Gradle project for practising file editing in IntelliJ IDEA and pushing changes to GitHub.
+A complete beginner-friendly Java console calculator for experimenting with IntelliJ IDEA, Gradle, and GitHub.
 
-## Project files
+## Features
 
-- `settings.gradle` — sets the Gradle project name.
-- `build.gradle` — tells Gradle how to build and run the Java application.
-- `src/main/java/Main.java` — the Java program you can edit and run.
-- `README.md` — project instructions.
+- Addition, subtraction, multiplication, and division
+- Repeats until you choose Exit
+- Checks invalid menu choices and number input
+- Prevents division by zero
+- Shows whole-number results without unnecessary decimal places
+
+## Project structure
+
+```text
+intellij-java-lab/
+├── settings.gradle
+├── build.gradle
+├── README.md
+└── src/
+    └── main/
+        └── java/
+            └── Main.java
+```
 
 ## Requirements
 
 - IntelliJ IDEA
 - JDK 21
+- Gradle support in IntelliJ IDEA (the IDE can import the Gradle project)
 
-## Run the program
+## Open and run in IntelliJ IDEA
 
-1. Clone this repository in IntelliJ IDEA using **Get from VCS**.
-2. Open the project and allow Gradle to finish syncing.
-3. Set the Project SDK and Gradle JVM to JDK 21.
-4. Open `src/main/java/Main.java`.
-5. Click the green run triangle beside `main`, or use the Gradle task `application > run`.
+1. Clone this repository using **Get from VCS**: `https://github.com/Acnweze/intellij-java-lab.git`.
+2. Open the cloned folder and accept the Gradle project import/sync.
+3. In **File → Project Structure → Project**, set the Project SDK to JDK 21.
+4. In **Settings → Build, Execution, Deployment → Build Tools → Gradle**, set **Gradle JVM** to JDK 21.
+5. Open `src/main/java/Main.java`.
+6. Click the green run triangle beside `main`, or run the Gradle task **application → run**.
 
-The program displays the date and time, asks for your name, and prints a greeting.
+## Try the calculator
+
+Choose an operation by entering its menu number. For example, choose `1`, enter `12` and `8`, and the result should be `12 + 8 = 20`. Choose `5` to exit.
 
 ## Editing experiments
 
-Try changing one thing at a time:
+1. Change the heading in `Main.java` and run it again.
+2. Add a menu option or a new method.
+3. Change the project name in `settings.gradle`; Gradle may ask to sync.
+4. Change the version in `build.gradle` from `1.0.0` to `1.1.0`, then sync Gradle.
+5. Add your own notes to this README.
 
-1. In `settings.gradle`, change the project name to `my-first-java-project`.
-2. In `build.gradle`, change `version = '1.0.0'` to `version = '1.1.0'`. Keep `mainClass = 'Main'` unless you also move or rename the Java class.
-3. In `Main.java`, change the welcome message or add another `System.out.println("I made an edit!");` line.
-4. In this README, add a sentence under this section.
+After practising, use **Git → Commit** and **Push** in IntelliJ IDEA to send your changes to GitHub.
 
-After each edit, save the file and run the program again if the change affects the Java code. The Gradle files may trigger a Gradle sync.
+## Gradle tasks
 
-## Useful Gradle tasks
+- `gradle run` — run the calculator.
+- `gradle build` — compile and build the project.
+- `gradle tasks` — list available tasks.
 
-- `gradle tasks` — lists available tasks.
-- `gradle run` — runs the application when Gradle is available.
-- `gradle build` — compiles and builds the project.
-
-If you edit files in IntelliJ, use **Git > Commit** and **Push** to send your changes to GitHub.
+If the Gradle command is not installed globally, run these tasks from IntelliJ's Gradle tool window instead.
